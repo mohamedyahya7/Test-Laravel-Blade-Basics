@@ -13,10 +13,9 @@
                     {{-- If user is logged in, show their email --}}
                     @auth 
                     Yes, I am logged in as {{auth()->user()->email}}.
-                    @endauth
-                    @guest
+                    @elseauth
                     No, I am not logged in.
-                    @endguest
+                    @endauth
                 </div>
             </div>
         </div>
